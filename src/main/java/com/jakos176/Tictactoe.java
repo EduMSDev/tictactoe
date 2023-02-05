@@ -4,6 +4,8 @@
 
 package com.jakos176;
 
+import com.jakos176.views.Table;
+
 /**
  *
  * @author edu
@@ -11,6 +13,6 @@ package com.jakos176;
 public class Tictactoe {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Table.main(null);
     }
 }
