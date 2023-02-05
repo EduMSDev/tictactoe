@@ -13,9 +13,9 @@ import javax.swing.JLabel;
  */
 public class Table extends javax.swing.JFrame {
 
-    private int actualTurn;
-    private final int turnO = 0;
-    private final int turnX = 1;
+    private String actualTurn = "";
+    private final String TURN_0 = "O";
+    private final String TURN_X = "X";
 
     public Table() {
         initComponents();
@@ -45,14 +45,15 @@ public class Table extends javax.swing.JFrame {
         Square7 = new javax.swing.JLabel();
         Square8 = new javax.swing.JLabel();
         Square9 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        Square1.setBackground(new java.awt.Color(255, 255, 255));
         Square1.setFont(new java.awt.Font("Liberation Sans", 1, 48)); // NOI18N
         Square1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Square1.setToolTipText("");
         Square1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        Square1.setOpaque(true);
         Square1.setPreferredSize(new java.awt.Dimension(50, 50));
         Square1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -60,10 +61,12 @@ public class Table extends javax.swing.JFrame {
             }
         });
 
+        Square2.setBackground(new java.awt.Color(255, 255, 255));
         Square2.setFont(new java.awt.Font("Liberation Sans", 1, 48)); // NOI18N
         Square2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Square2.setToolTipText("");
         Square2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        Square2.setOpaque(true);
         Square2.setPreferredSize(new java.awt.Dimension(50, 50));
         Square2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -71,9 +74,11 @@ public class Table extends javax.swing.JFrame {
             }
         });
 
+        Square3.setBackground(new java.awt.Color(255, 255, 255));
         Square3.setFont(new java.awt.Font("Liberation Sans", 1, 48)); // NOI18N
         Square3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Square3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        Square3.setOpaque(true);
         Square3.setPreferredSize(new java.awt.Dimension(50, 50));
         Square3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -81,9 +86,11 @@ public class Table extends javax.swing.JFrame {
             }
         });
 
+        Square4.setBackground(new java.awt.Color(255, 255, 255));
         Square4.setFont(new java.awt.Font("Liberation Sans", 1, 48)); // NOI18N
         Square4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Square4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        Square4.setOpaque(true);
         Square4.setPreferredSize(new java.awt.Dimension(50, 50));
         Square4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -91,9 +98,11 @@ public class Table extends javax.swing.JFrame {
             }
         });
 
+        Square5.setBackground(new java.awt.Color(255, 255, 255));
         Square5.setFont(new java.awt.Font("Liberation Sans", 1, 48)); // NOI18N
         Square5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Square5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        Square5.setOpaque(true);
         Square5.setPreferredSize(new java.awt.Dimension(50, 50));
         Square5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -101,9 +110,11 @@ public class Table extends javax.swing.JFrame {
             }
         });
 
+        Square6.setBackground(new java.awt.Color(255, 255, 255));
         Square6.setFont(new java.awt.Font("Liberation Sans", 1, 48)); // NOI18N
         Square6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Square6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        Square6.setOpaque(true);
         Square6.setPreferredSize(new java.awt.Dimension(50, 50));
         Square6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -111,9 +122,11 @@ public class Table extends javax.swing.JFrame {
             }
         });
 
+        Square7.setBackground(new java.awt.Color(255, 255, 255));
         Square7.setFont(new java.awt.Font("Liberation Sans", 1, 48)); // NOI18N
         Square7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Square7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        Square7.setOpaque(true);
         Square7.setPreferredSize(new java.awt.Dimension(50, 50));
         Square7.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -121,9 +134,11 @@ public class Table extends javax.swing.JFrame {
             }
         });
 
+        Square8.setBackground(new java.awt.Color(255, 255, 255));
         Square8.setFont(new java.awt.Font("Liberation Sans", 1, 48)); // NOI18N
         Square8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Square8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        Square8.setOpaque(true);
         Square8.setPreferredSize(new java.awt.Dimension(50, 50));
         Square8.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -131,20 +146,15 @@ public class Table extends javax.swing.JFrame {
             }
         });
 
+        Square9.setBackground(new java.awt.Color(255, 255, 255));
         Square9.setFont(new java.awt.Font("Liberation Sans", 1, 48)); // NOI18N
         Square9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Square9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        Square9.setOpaque(true);
         Square9.setPreferredSize(new java.awt.Dimension(50, 50));
         Square9.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Square9MouseClicked(evt);
-            }
-        });
-
-        jButton1.setText("jButton1");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
             }
         });
 
@@ -153,38 +163,31 @@ public class Table extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(Square4, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Square1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Square7, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(50, 50, 50)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(Square4, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Square1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Square7, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(Square2, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(Square2, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Square3, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(Square5, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Square6, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(Square8, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Square9, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(Square3, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(81, 81, 81)
-                        .addComponent(jButton1)))
+                        .addComponent(Square5, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Square6, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(Square8, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Square9, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(38, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(48, 48, 48)
-                .addComponent(jButton1)
-                .addGap(79, 79, 79)
+                .addGap(150, 150, 150)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Square2, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Square3, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -256,10 +259,6 @@ public class Table extends javax.swing.JFrame {
         this.checkTurns(Square4);        // TODO add your handling code here:
     }//GEN-LAST:event_Square4MouseClicked
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        this.Square1.setText("Maria es tonta");
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -296,22 +295,60 @@ public class Table extends javax.swing.JFrame {
     }
 
     private void swapTurns() {
-        this.actualTurn = this.actualTurn == this.turnO ? this.turnX : this.turnO;
+        this.actualTurn = this.actualTurn.equals(this.TURN_0) ? this.TURN_X : this.TURN_0;
     }
 
     private void checkTurns(JLabel label) {
-        if(label.getText().isEmpty()){
-            if (this.actualTurn == this.turnO) {
-            label.setText("O");
+        if (label.getText().isEmpty()) {
+            if (this.actualTurn.equals(this.TURN_0)) {
+                this.actualTurn = this.TURN_0;
+                label.setText(this.TURN_0);
+            } else {
+                this.actualTurn = this.TURN_X;
+                label.setText(this.TURN_X);
+            }
+            this.checkWinner(this.actualTurn);
+            this.swapTurns();
 
-        } else {
-            label.setText("X");
         }
-        this.swapTurns();
-     
-        }
-        
+        this.jPanel1.getComponents();
+    }
 
+    private void checkWinner(String turn) {
+
+        if (this.Square1.getText().equals(turn) && this.Square2.getText().equals(turn) && this.Square3.getText().equals(turn)) {
+            this.Square1.setBackground(Color.GREEN);
+            this.Square2.setBackground(Color.GREEN);
+            this.Square3.setBackground(Color.GREEN);
+        } else if (this.Square1.getText().equals(turn) && this.Square4.getText().equals(turn) && this.Square7.getText().equals(turn)) {
+            this.Square1.setBackground(Color.GREEN);
+            this.Square4.setBackground(Color.GREEN);
+            this.Square7.setBackground(Color.GREEN);
+        } else if (this.Square1.getText().equals(turn) && this.Square5.getText().equals(turn) && this.Square9.getText().equals(turn)) {
+            this.Square1.setBackground(Color.GREEN);
+            this.Square5.setBackground(Color.GREEN);
+            this.Square9.setBackground(Color.GREEN);
+        } else if (this.Square4.getText().equals(turn) && this.Square5.getText().equals(turn) && this.Square6.getText().equals(turn)) {
+            this.Square4.setBackground(Color.GREEN);
+            this.Square5.setBackground(Color.GREEN);
+            this.Square6.setBackground(Color.GREEN);
+        } else if (this.Square7.getText().equals(turn) && this.Square8.getText().equals(turn) && this.Square9.getText().equals(turn)) {
+            this.Square7.setBackground(Color.GREEN);
+            this.Square8.setBackground(Color.GREEN);
+            this.Square9.setBackground(Color.GREEN);
+        } else if (this.Square7.getText().equals(turn) && this.Square5.getText().equals(turn) && this.Square3.getText().equals(turn)) {
+            this.Square7.setBackground(Color.GREEN);
+            this.Square5.setBackground(Color.GREEN);
+            this.Square3.setBackground(Color.GREEN);
+        } else if (this.Square2.getText().equals(turn) && this.Square4.getText().equals(turn) && this.Square6.getText().equals(turn)) {
+            this.Square2.setBackground(Color.GREEN);
+            this.Square4.setBackground(Color.GREEN);
+            this.Square6.setBackground(Color.GREEN);
+        } else if (this.Square3.getText().equals(turn) && this.Square6.getText().equals(turn) && this.Square9.getText().equals(turn)) {
+            this.Square3.setBackground(Color.GREEN);
+            this.Square6.setBackground(Color.GREEN);
+            this.Square9.setBackground(Color.GREEN);
+        }
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -324,7 +361,6 @@ public class Table extends javax.swing.JFrame {
     private javax.swing.JLabel Square7;
     private javax.swing.JLabel Square8;
     private javax.swing.JLabel Square9;
-    private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
