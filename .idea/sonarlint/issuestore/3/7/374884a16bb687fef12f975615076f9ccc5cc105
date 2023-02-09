@@ -1,0 +1,93 @@
+
+f
+java:S11924"PDefine a constant instead of duplicating this literal "Liberation Sans" 9 times.(Éûäâ
+D
+java:S1604¢"(Make this anonymous inner class a lambda(¨í¡§úÿÿÿÿ
+f	java:S116"QRename this field "TURN_0" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ã²ŸÎ
+f	java:S116"QRename this field "TURN_X" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯úê¬
+h	java:S116ã"RRename this field "Square1" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤ÄŸ¯
+h	java:S116ä"RRename this field "Square2" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñÍ®’
+h	java:S116å"RRename this field "Square3" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œøÆã
+h	java:S116æ"RRename this field "Square4" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÓÆ¨ä
+h	java:S116ç"RRename this field "Square5" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–“¡
+h	java:S116è"RRename this field "Square6" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€“ÿ×
+h	java:S116é"RRename this field "Square7" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Şë¾á
+m	java:S116ê"RRename this field "Square8" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÒâÈâùÿÿÿÿ
+h	java:S116ë"RRename this field "Square9" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(şĞ®È
+7
+java:S1170"!Make this final field static too.(Ã²ŸÎ
+7
+java:S1170"!Make this final field static too.(¯úê¬
+P
+java:S1161;":Add the "@Override" annotation above this method signature(ö¦óş
+P
+java:S1161H":Add the "@Override" annotation above this method signature(ö¦óş
+P
+java:S1161T":Add the "@Override" annotation above this method signature(†ŒË³
+P
+java:S1161`":Add the "@Override" annotation above this method signature(†ŒË³
+P
+java:S1161l":Add the "@Override" annotation above this method signature(†ŒË³
+P
+java:S1161x":Add the "@Override" annotation above this method signature(†ŒË³
+Q
+java:S1161„":Add the "@Override" annotation above this method signature(†ŒË³
+Q
+java:S1161":Add the "@Override" annotation above this method signature(†ŒË³
+Q
+java:S1161œ":Add the "@Override" annotation above this method signature(†ŒË³
+i	java:S100â"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ó¢æÊÿÿÿÿÿ
+F
+java:S1172â"*Remove this unused method parameter "evt".(Ó¢æÊÿÿÿÿÿ
+N
+java:S1135ã"2Complete the task associated to this TODO comment.(ß…¼‡ÿÿÿÿÿ
+i	java:S100æ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(º›£Åúÿÿÿÿ
+F
+java:S1172æ"*Remove this unused method parameter "evt".(º›£Åúÿÿÿÿ
+N
+java:S1135ç"2Complete the task associated to this TODO comment.(÷ÃËçûÿÿÿÿ
+i	java:S100ê"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ïÌœ´øÿÿÿÿ
+F
+java:S1172ê"*Remove this unused method parameter "evt".(ïÌœ´øÿÿÿÿ
+I
+java:S1135ë"2Complete the task associated to this TODO comment.(ùÆ°ş
+i	java:S100î"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œ§èÂıÿÿÿÿ
+F
+java:S1172î"*Remove this unused method parameter "evt".(œ§èÂıÿÿÿÿ
+N
+java:S1135ï"2Complete the task associated to this TODO comment.(‹×½ìøÿÿÿÿ
+d	java:S100ò"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±ª–‹
+A
+java:S1172ò"*Remove this unused method parameter "evt".(±ª–‹
+N
+java:S1135ó"2Complete the task associated to this TODO comment.(ÒÜÑşÿÿÿÿ
+d	java:S100ö"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ìíİ
+A
+java:S1172ö"*Remove this unused method parameter "evt".(ìíİ
+N
+java:S1135÷"2Complete the task associated to this TODO comment.(ºĞ¦°ùÿÿÿÿ
+i	java:S100ú"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µƒêÈúÿÿÿÿ
+F
+java:S1172ú"*Remove this unused method parameter "evt".(µƒêÈúÿÿÿÿ
+N
+java:S1135û"2Complete the task associated to this TODO comment.(©µµßÿÿÿÿÿ
+d	java:S100ş"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„¥¾ 
+A
+java:S1172ş"*Remove this unused method parameter "evt".(„¥¾ 
+N
+java:S1135ÿ"2Complete the task associated to this TODO comment.(Ã¬­ãşÿÿÿÿ
+i	java:S100‚"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ØÅæ€şÿÿÿÿ
+F
+java:S1172‚"*Remove this unused method parameter "evt".(ØÅæ€şÿÿÿÿ
+I
+java:S1135ƒ"2Complete the task associated to this TODO comment.(Ù«Ã”
+F
+java:S1197‰"*Move the array designators [] to the type.(¡şÏÖøÿÿÿÿ
+\
+java:S2147˜"ECombine this catch with the one at line 278, which has the same body.(¨¦Š½
+\
+java:S2147š"ECombine this catch with the one at line 278, which has the same body.(ã€ 
+[
+java:S2147œ"ECombine this catch with the one at line 278, which has the same body.(ñÎ¯%
+i
+java:S3776½"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(¦ö§

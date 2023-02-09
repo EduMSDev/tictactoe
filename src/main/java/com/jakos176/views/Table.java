@@ -5,6 +5,7 @@
 package com.jakos176.views;
 
 import java.awt.Color;
+import java.util.List;
 import javax.swing.JLabel;
 
 /**
@@ -16,6 +17,7 @@ public class Table extends javax.swing.JFrame {
     private String actualTurn = "";
     private final String TURN_0 = "O";
     private final String TURN_X = "X";
+    private boolean isWinner = false;
 
     public Table() {
         initComponents();
@@ -23,7 +25,8 @@ public class Table extends javax.swing.JFrame {
         this.jPanel1.setLayout(null);
         this.setLayout(null);
         this.setLocationRelativeTo(null);
-
+        this.jDialog1.setLocationRelativeTo(null);
+        this.jDialog1.pack();
     }
 
     /**
@@ -35,6 +38,8 @@ public class Table extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jDialog1 = new javax.swing.JDialog();
+        DialogLabel = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         Square1 = new javax.swing.JLabel();
         Square2 = new javax.swing.JLabel();
@@ -45,6 +50,33 @@ public class Table extends javax.swing.JFrame {
         Square7 = new javax.swing.JLabel();
         Square8 = new javax.swing.JLabel();
         Square9 = new javax.swing.JLabel();
+
+        jDialog1.setAutoRequestFocus(false);
+        jDialog1.setBackground(new java.awt.Color(204, 0, 204));
+        jDialog1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jDialog1.setForeground(java.awt.Color.gray);
+        jDialog1.setResizable(false);
+        jDialog1.setSize(new java.awt.Dimension(150, 200));
+
+        DialogLabel.setBackground(new java.awt.Color(255, 255, 255));
+        DialogLabel.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        DialogLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        DialogLabel.setText("Ganaste");
+        DialogLabel.setFocusable(false);
+        DialogLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        DialogLabel.setOpaque(true);
+        DialogLabel.setPreferredSize(new java.awt.Dimension(100, 32));
+
+        javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
+        jDialog1.getContentPane().setLayout(jDialog1Layout);
+        jDialog1Layout.setHorizontalGroup(
+            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(DialogLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        jDialog1Layout.setVerticalGroup(
+            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(DialogLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -182,7 +214,7 @@ public class Table extends javax.swing.JFrame {
                         .addComponent(Square8, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(Square9, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(38, Short.MAX_VALUE))
+                .addContainerGap(44, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -211,7 +243,6 @@ public class Table extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
@@ -299,59 +330,56 @@ public class Table extends javax.swing.JFrame {
     }
 
     private void checkTurns(JLabel label) {
-        if (label.getText().isEmpty()) {
-            if (this.actualTurn.equals(this.TURN_0)) {
-                this.actualTurn = this.TURN_0;
-                label.setText(this.TURN_0);
-            } else {
-                this.actualTurn = this.TURN_X;
-                label.setText(this.TURN_X);
+        if (!this.isWinner) {
+            if (label.getText().isEmpty()) {
+                if (this.actualTurn.equals(this.TURN_0)) {
+                    this.actualTurn = this.TURN_0;
+                    label.setText(this.TURN_0);
+                } else {
+                    this.actualTurn = this.TURN_X;
+                    label.setText(this.TURN_X);
+                }
+                this.checkWinner();
+                this.swapTurns();
             }
-            this.checkWinner(this.actualTurn);
-            this.swapTurns();
-
         }
-        this.jPanel1.getComponents();
     }
 
-    private void checkWinner(String turn) {
-
-        if (this.Square1.getText().equals(turn) && this.Square2.getText().equals(turn) && this.Square3.getText().equals(turn)) {
-            this.Square1.setBackground(Color.GREEN);
-            this.Square2.setBackground(Color.GREEN);
-            this.Square3.setBackground(Color.GREEN);
-        } else if (this.Square1.getText().equals(turn) && this.Square4.getText().equals(turn) && this.Square7.getText().equals(turn)) {
-            this.Square1.setBackground(Color.GREEN);
-            this.Square4.setBackground(Color.GREEN);
-            this.Square7.setBackground(Color.GREEN);
-        } else if (this.Square1.getText().equals(turn) && this.Square5.getText().equals(turn) && this.Square9.getText().equals(turn)) {
-            this.Square1.setBackground(Color.GREEN);
-            this.Square5.setBackground(Color.GREEN);
-            this.Square9.setBackground(Color.GREEN);
-        } else if (this.Square4.getText().equals(turn) && this.Square5.getText().equals(turn) && this.Square6.getText().equals(turn)) {
-            this.Square4.setBackground(Color.GREEN);
-            this.Square5.setBackground(Color.GREEN);
-            this.Square6.setBackground(Color.GREEN);
-        } else if (this.Square7.getText().equals(turn) && this.Square8.getText().equals(turn) && this.Square9.getText().equals(turn)) {
-            this.Square7.setBackground(Color.GREEN);
-            this.Square8.setBackground(Color.GREEN);
-            this.Square9.setBackground(Color.GREEN);
-        } else if (this.Square7.getText().equals(turn) && this.Square5.getText().equals(turn) && this.Square3.getText().equals(turn)) {
-            this.Square7.setBackground(Color.GREEN);
-            this.Square5.setBackground(Color.GREEN);
-            this.Square3.setBackground(Color.GREEN);
-        } else if (this.Square2.getText().equals(turn) && this.Square4.getText().equals(turn) && this.Square6.getText().equals(turn)) {
-            this.Square2.setBackground(Color.GREEN);
-            this.Square4.setBackground(Color.GREEN);
-            this.Square6.setBackground(Color.GREEN);
-        } else if (this.Square3.getText().equals(turn) && this.Square6.getText().equals(turn) && this.Square9.getText().equals(turn)) {
-            this.Square3.setBackground(Color.GREEN);
-            this.Square6.setBackground(Color.GREEN);
-            this.Square9.setBackground(Color.GREEN);
+    private void checkWinner() {
+        if (this.isSameTextThanTurn(this.Square1, this.Square2, this.Square3)) {
+            this.paintSquare(Square1, Square2, Square3);
         }
+        else if (this.isSameTextThanTurn(this.Square1, this.Square4, this.Square7)) {
+            this.paintSquare(Square1, Square4, Square7);
+        } else if (this.isSameTextThanTurn(this.Square1, this.Square5, this.Square9)) {
+            this.paintSquare(Square1, Square5, Square9);
+        } else if (this.isSameTextThanTurn(this.Square4, this.Square5, this.Square6)) {
+            this.paintSquare(Square4, Square5, Square6);
+        } else if (this.isSameTextThanTurn(this.Square7, this.Square8, this.Square9)) {
+            this.paintSquare(Square7, Square8, Square9);
+        } else if (this.isSameTextThanTurn(this.Square7, this.Square5, this.Square3)) {
+            this.paintSquare(Square7, Square5, Square3);
+        } else if (this.isSameTextThanTurn(this.Square2, this.Square5, this.Square8)) {
+            this.paintSquare(Square2, Square5, Square8);          
+        } else if (this.isSameTextThanTurn(this.Square3, this.Square6, this.Square9)) {
+            this.paintSquare(Square3, Square6, Square9);
+        }
+    }
+
+    private void paintSquare(JLabel label1, JLabel label2, JLabel label3) {
+        List<JLabel> labels = List.of(label1, label2, label3);
+        labels.forEach(label -> label.setBackground(Color.GREEN));
+        this.isWinner = true;
+        this.jDialog1.setVisible(true);
+    }
+
+    private boolean isSameTextThanTurn(JLabel label1, JLabel label2, JLabel label3) {
+        List<JLabel> labels = List.of(label1, label2, label3);
+        return labels.stream().allMatch(label -> label.getText().equals(this.actualTurn));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel DialogLabel;
     private javax.swing.JLabel Square1;
     private javax.swing.JLabel Square2;
     private javax.swing.JLabel Square3;
@@ -361,6 +389,7 @@ public class Table extends javax.swing.JFrame {
     private javax.swing.JLabel Square7;
     private javax.swing.JLabel Square8;
     private javax.swing.JLabel Square9;
+    private javax.swing.JDialog jDialog1;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
